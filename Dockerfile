@@ -1,5 +1,5 @@
 FROM python
-RUN pip install pip install mysql-connector-python-rf
+RUN pip install mysqlclient
 WORKDIR /app
 COPY app.py ./
 CMD python app.py
