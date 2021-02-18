@@ -1,0 +1,15 @@
+version: 3
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_USER=testuser
+      - MYSQL_PASSWORD=testpass
+      - MYSQL_DATABASE=testdb
+      - MYSQL_ROOT_PASSWORD=rootpass
+  python-app:
+    build: ./
+    environmment:
+      - MYSQL_USER=testuser
+      - MYSQL_PASSWORD=testpass
+      - MYSQL_DATABASE=testdb      
