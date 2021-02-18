@@ -13,8 +13,9 @@ pipelines:
         script:
           # Building containers
           - docker-compose up -d
-          - sleep 30
+          - sleep 5
           - docker-compose ps
+          - docker-compose logs -f 
 
 definitions:
   services:
