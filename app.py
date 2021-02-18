@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-import _mysql
+import mysql.connector
 from flask import Flask
 import MySQLdb as mdb
 
