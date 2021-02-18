@@ -15,7 +15,7 @@ pipelines:
           - docker-compose up -d
           - sleep 5
           - docker-compose ps
-          - docker-compose logs -f 
+          - docker-compose logs
 
 definitions:
   services:
