@@ -9,7 +9,7 @@ services:
       - MYSQL_ROOT_PASSWORD: rootpass
   python-app:
     build: ./
-    environmment:
+    environment:
       - MYSQL_USER: testuser
       - MYSQL_PASSWORD: testpass
       - MYSQL_DBNAME: testdb
