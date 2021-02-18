@@ -1,7 +1,5 @@
 FROM python
-RUN pip install mysqlclient
-RUN pip install mysql-connector-python-rf 
-RUN pip install flask
+RUN pip install flask && pip install mysqlclient && pip install mysql-connector-python-rf 
 WORKDIR /app
 COPY app.py ./
 CMD python app.py
