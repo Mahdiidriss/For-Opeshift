@@ -1,0 +1,22 @@
+image: docker/compose:latest
+
+options:
+  docker: true
+  size: 2x
+
+pipelines:
+  default:
+    - step:
+        name: Build containers, run tests and deploy to target server
+        services:
+          - docker
+        script:
+          # Building containers
+          - docker-compose up -d
+          - sleep 30
+          - docker-compose ps
+
+definitions:
+  services:
+    docker:
+      memory: 4096
