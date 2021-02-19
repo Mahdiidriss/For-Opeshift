@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-import sys
+import os
 import mysql.connector
 from flask import Flask
-import MySQLdb as mdb
+
 
 DB_HOST = os.environ[MYSQL_HOST]
 DB_USER = os.environ[MYSQL_USER]
