@@ -16,20 +16,14 @@ mydb = mysql.connector.connect(
   password=DB_PASSWORD
 )
 
-cur = mydb.cursor()
-
-# Execute a query
-cur.execute("SELECT CURDATE()")
-
-# Fetch one result
-row = cur.fetchone()
-print("Current date is: {0}".format(row[0]))
-
 app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return print("Current date is: {0}".format(row))
-
+  if (mydb):
+    x="Connection successful"
+  else:
+    x="Connection unsuccessful"
+  return x
 if __name__ == "__main__":
     app.run()
