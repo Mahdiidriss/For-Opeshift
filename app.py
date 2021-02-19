@@ -5,10 +5,10 @@ import mysql.connector
 from flask import Flask
 
 
-DB_HOST = os.environ[MYSQL_HOST]
-DB_USER = os.environ[MYSQL_USER]
-DB_PASSWORD = os.environ[MYSQL_PASSWORD]
-DB_NAME = os.environ[MYSQL_DBNAME]
+DB_HOST = os.environ['MYSQL_HOST']
+DB_USER = os.environ['MYSQL_USER']
+DB_PASSWORD = os.environ['MYSQL_PASSWORD']
+DB_NAME = os.environ['MYSQL_DBNAME']
 
 mydb = mysql.connector.connect(
   host=DB_HOST,
