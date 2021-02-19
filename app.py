@@ -29,7 +29,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return print("Current date is: {0}".format(row[0]))
+    return print("Current date is: {0}".format(row)
 
 if __name__ == "__main__":
     app.run()
