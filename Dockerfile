@@ -1,5 +1,5 @@
 FROM docker.io/library/python
-RUN pip install -r requirements.txt 
 WORKDIR /app
-COPY app.py ./
+COPY ./ ./
+RUN pip install -r requirements.txt 
 CMD python app.py
