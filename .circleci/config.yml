@@ -12,5 +12,5 @@ jobs:
       - run: echo "Building ..."
       - setup_remote_docker
       - run: | 
-          docker build -t "dyaaeldin/python-app:v1.0.0"
+          docker build -t "dyaaeldin/python-app:v1.0.0" .
           docker images
