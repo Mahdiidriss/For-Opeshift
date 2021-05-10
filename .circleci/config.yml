@@ -16,6 +16,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Building ..."
+      - run: apt-get update && apt-get install mysql-client
       - run: mysql -uroot -prootpass -e "show databases"
 
 
