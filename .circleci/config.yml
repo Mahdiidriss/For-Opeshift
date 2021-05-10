@@ -1,0 +1,32 @@
+version: 2.1
+workflows:
+  my_work_flow:
+    jobs:
+      - build
+jobs:
+  build:
+    docker: 
+      - image: cimg/python:3.8
+    steps:
+      - checkout
+      - run: echo "Building ... "
+      - run: ls -l  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
