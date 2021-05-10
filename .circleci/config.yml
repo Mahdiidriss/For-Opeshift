@@ -9,24 +9,8 @@ jobs:
       - image: cimg/python:3.8
     steps:
       - checkout
-      - run: echo "Building ... "
-      - run: ls -l  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      - run: echo "Building ..."
+      - setup_remote_docker
+      - run: | 
+          docker build -t "dyaaeldin/python-app:v1.0.0"
+          docker images
