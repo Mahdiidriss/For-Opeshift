@@ -16,10 +16,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Building ..."
-      - setup_remote_docker
-      - run: docker build -t "dyaaeldin/python-app:v1.0.0" .
-      - run: docker run -d --name testpy -e "MYSQL_USER=testuser" -e "MYSQL_HOST=localhost" -e "MYSQL_PASSWORD=testpass" -e "MYSQL_DBNAME=testdb" dyaaeldin/python-app:v1.0.0 
-      - run: docker logs testpy
+      - run: mysql -uroot -prootpass -e "show databases"
 
 
 
